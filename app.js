@@ -11,8 +11,8 @@ async function main() {
         port: 465,
         secure: true,
         auth: {
-            user: 'test@openjavascript.info', // Correct email address
-            pass: 'your_password' // Correct password
+            user: 'test@openjavascript.info', 
+            pass: 'your_password' 
         }
     });
 
