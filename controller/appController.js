@@ -16,13 +16,13 @@ const signup = async (req, res) => {
         },
       });
 
-      let info = await transporter.sendMail({
+      let message={
         from: '"Fred foo" <foo@example.com>',
         to: "bar@example.com, baz@example.com",
         subject: "Hello",
         text: "Hello world",
         html: "<b>Hello world</b>",
-      });
+      }
 
     res.status(201).json("Signup Successful");
 }
