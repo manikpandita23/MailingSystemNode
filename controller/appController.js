@@ -25,8 +25,13 @@ const signup = async (req, res) => {
     }
 
 
-    transporter.sendMail(message).then(() => {
-        return res.status(201).json({ msg: "you should receieve an email" })
+    transporter.sendMail(message).then((info) => {
+        return res.status(201)
+            .json({
+                msg: "you should receieve an email",
+                info: info.messageId,
+                preview: nodemailer.getTestMessageUrl
+            })
     }).catch(error => {
         return res.status(500).json({ error })
     })
