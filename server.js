@@ -7,7 +7,7 @@ const PORT = process.env.PORT ||3000;
 app.use(express.json());
 
 
-app.use('/api', appRoute)
+app.use('/api', appRoute);
 
 app.listen(PORT, ()=> {
     console.log('Server initiated')
