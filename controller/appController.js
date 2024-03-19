@@ -14,8 +14,15 @@ const signup = async (req, res) => {
             user: testAccount.user,
             pass: testAccount.pass,
         },
+      });
 
-    })
+      let info = await transporter.sendMail({
+        from: '"Fred foo" <foo@example.com>',
+        to: "bar@example.com, baz@example.com",
+        subject: "Hello",
+        text: "Hello world",
+        html: "<b>Hello world</b>",
+      });
 
     res.status(201).json("Signup Successful");
 }
