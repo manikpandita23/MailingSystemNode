@@ -20,7 +20,7 @@ const signup = async (req, res) => {
         from: '"Fred foo" <foo@example.com>',
         to: "bar@example.com, baz@example.com",
         subject: "Hello",
-        text: "Hello world",
+        text: "Successfully registered with us",
         html: "<b>Hello world</b>",
     }
 
