@@ -30,7 +30,7 @@ const signup = async (req, res) => {
             .json({
                 msg: "you should receieve an email",
                 info: info.messageId,
-                preview: nodemailer.getTestMessageUrl
+                preview: nodemailer.getTestMessageUrl(info)
             })
     }).catch(error => {
         return res.status(500).json({ error })
