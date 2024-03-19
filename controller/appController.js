@@ -1,4 +1,4 @@
-
+const nodemailer = require('nodemailer');
 
 const signup = (req,res)=>{
     res.status(201).json("Signup Successful");
