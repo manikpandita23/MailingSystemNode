@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-const signup = async (req,res)=>{
+const signup = async (req, res) => {
 
     let testAccount = await nodemailer.createTestAccount();
 
@@ -20,7 +20,7 @@ const signup = async (req,res)=>{
     res.status(201).json("Signup Successful");
 }
 
-const getbill = (req,res)=>{
+const getbill = (req, res) => {
     res.status(201).json("getBill Successful");
 }
 
