@@ -9,5 +9,6 @@ const getbill = (req,res)=>{
 }
 
 module.exports = {
-    signup
+    signup,
+    getbill
 }
