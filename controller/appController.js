@@ -14,17 +14,24 @@ const signup = async (req, res) => {
             user: testAccount.user,
             pass: testAccount.pass,
         },
-      });
+    });
 
-      let message={
+    let message = {
         from: '"Fred foo" <foo@example.com>',
         to: "bar@example.com, baz@example.com",
         subject: "Hello",
         text: "Hello world",
         html: "<b>Hello world</b>",
-      }
+    }
 
-    res.status(201).json("Signup Successful");
+
+    transporter.sendMail(message).then(() => {
+        return res.status(201).json({ msg: "you should receieve an email" })
+    }).catch(error => {
+        return res.status(500).json({ error })
+    })
+
+    //res.status(201).json("Signup Successful");
 }
 
 const getbill = (req, res) => {
